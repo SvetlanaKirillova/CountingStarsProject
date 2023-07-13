@@ -23,23 +23,19 @@ struct GameBrain {
         K.Colors.yellow
     ]
     
-    init(fieldHeight: Int, fieldWidth: Int) {
+    
+    init(fieldHeight: Int, fieldWidth: Int, colorQnt: Int) {
 
         self.fieldHeight = fieldHeight
         self.fieldWidth = fieldWidth
+
         battleField = Array(repeating: Array(repeating: nil , count: fieldWidth ), count: fieldHeight )
         
         fullFillBattleField()
         for color in colors {
-            fillRandomly(with: color, inQuantity: 20)
+            fillRandomly(with: color, inQuantity: colorQnt)
         }
-//        fillRandomly(with: 1, inQuantity: 20)
-//        fillRandomly(with: 2, inQuantity: 20)
-//        fillRandomly(with: 3, inQuantity: 20)
-//        fillRandomly(with: 4, inQuantity: 20)
-//        fillRandomly(with: 5, inQuantity: 20)
-//        fillRandomly(with: 6, inQuantity: 20)
-//        fillRandomly(with: 7, inQuantity: 20)
+
     }
     
     
@@ -53,6 +49,7 @@ struct GameBrain {
             }
         }
     }
+    
     
     mutating func fillRandomly(with value: String, inQuantity qnt: Int){
         
@@ -77,7 +74,6 @@ struct GameBrain {
     func findIntersections(at point: GameCell) -> [GameCell?] {
         
         var crossPoints = [GameCell?]()
-//        var pointA, pointB, pointC, pointD: GameCell?
 
         var x = point.x-1
         

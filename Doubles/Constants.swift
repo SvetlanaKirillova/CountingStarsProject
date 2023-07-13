@@ -9,15 +9,22 @@ import Foundation
 
 struct K {
     
+    static let levelDefaultsKey = "currentLevel"
+    
     struct Colors {
-        static let red = "RedColor"
+        
+        static let aquamarine = "AquamarineColor"
+        static let blue = "BlueColor"
+        static let gray = "GrayColor"
+        static let green = "GreenColor"
+        static let lightBlue = "LightBlueColor"
         static let pink = "PinkColor"
         static let purple = "PurpleColor"
-        static let blue = "BlueColor"
-        static let lightBlue = "LightBlueColor"
-        static let green = "GreenColor"
+        static let red = "RedColor"
+        static let white = "WhiteColor"
         static let yellow = "YellowColor"
-        static let gray = "GrayColor"
+        
+        
         
         static let cellColor = "CellColor"
         static let selectedCellColor = "SelectedCellColor"

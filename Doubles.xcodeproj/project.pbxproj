@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C3B023E2A555ACB001F0145 /* GameLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3B023D2A555ACA001F0145 /* GameLevel.swift */; };
 		1C648C192A2DC349008D4097 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C648C182A2DC349008D4097 /* Constants.swift */; };
 		1C6767852A29EDE1008EE823 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6767842A29EDE1008EE823 /* AppDelegate.swift */; };
 		1C6767872A29EDE1008EE823 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6767862A29EDE1008EE823 /* SceneDelegate.swift */; };
-		1C6767892A29EDE1008EE823 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6767882A29EDE1008EE823 /* ViewController.swift */; };
+		1C6767892A29EDE1008EE823 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6767882A29EDE1008EE823 /* GameViewController.swift */; };
 		1C67678C2A29EDE1008EE823 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C67678A2A29EDE1008EE823 /* Main.storyboard */; };
 		1C67678E2A29EDE3008EE823 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C67678D2A29EDE3008EE823 /* Assets.xcassets */; };
 		1C6767912A29EDE3008EE823 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C67678F2A29EDE3008EE823 /* LaunchScreen.storyboard */; };
@@ -20,11 +21,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C3B023D2A555ACA001F0145 /* GameLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLevel.swift; sourceTree = "<group>"; };
 		1C648C182A2DC349008D4097 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1C6767812A29EDE1008EE823 /* Counting Stars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Counting Stars.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C6767842A29EDE1008EE823 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C6767862A29EDE1008EE823 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1C6767882A29EDE1008EE823 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1C6767882A29EDE1008EE823 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		1C67678B2A29EDE1008EE823 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1C67678D2A29EDE3008EE823 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C6767902A29EDE3008EE823 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			children = (
 				1C6767982A29EE6B008EE823 /* GameBrain.swift */,
 				1C67679B2A29EEBE008EE823 /* GameCell.swift */,
+				1C3B023D2A555ACA001F0145 /* GameLevel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -89,7 +92,7 @@
 		1C68A5482A2C910700DE02E2 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				1C6767882A29EDE1008EE823 /* ViewController.swift */,
+				1C6767882A29EDE1008EE823 /* GameViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -176,8 +179,9 @@
 			files = (
 				1C67679C2A29EEBE008EE823 /* GameCell.swift in Sources */,
 				1C6767992A29EE6B008EE823 /* GameBrain.swift in Sources */,
-				1C6767892A29EDE1008EE823 /* ViewController.swift in Sources */,
+				1C6767892A29EDE1008EE823 /* GameViewController.swift in Sources */,
 				1C6767852A29EDE1008EE823 /* AppDelegate.swift in Sources */,
+				1C3B023E2A555ACB001F0145 /* GameLevel.swift in Sources */,
 				1C648C192A2DC349008D4097 /* Constants.swift in Sources */,
 				1C6767872A29EDE1008EE823 /* SceneDelegate.swift in Sources */,
 				1C68A54B2A2C920400DE02E2 /* CollectionCell.swift in Sources */,
@@ -313,7 +317,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
+				"SWIFT_ACTIVE_COMPILATION_CONDITIONS[arch=*]" = "";
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
@@ -331,11 +337,13 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Doubles/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = CountingStarts;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -343,9 +351,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = kz.svetakirillova.Doubles;
 				PRODUCT_NAME = "Counting Stars";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -360,11 +371,13 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Doubles/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = CountingStarts;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -372,9 +385,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = kz.svetakirillova.Doubles;
 				PRODUCT_NAME = "Counting Stars";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
